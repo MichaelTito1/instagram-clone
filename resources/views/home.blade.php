@@ -13,11 +13,11 @@
                 <div class="ps-2"><strong>23k</strong> followers</div>
                 <div class="ps-2"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4"><strong>freeCodeCamp.org</strong></div>
+            <div class="pt-4"><strong>{{ $user->profile->title }}</strong></div>
             <div>
-                We're a global community of millions of people learning to code together. LearnToCodeRPG: https://www.freecodecamp.org/news/learn-to-code-rpg/
+                {{ $user->profile->description }}
             </div>
-            <div><a href="#">www.freecodecamp.org</a></div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 </div>
