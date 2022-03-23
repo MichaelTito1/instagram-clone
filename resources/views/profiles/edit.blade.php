@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="row pt-4">
-                    <button class="btn btn-primary">Edit Post</button>
+                    <button class="btn btn-primary">Edit Profile</button>
                 </div>
             </div>
         </div>

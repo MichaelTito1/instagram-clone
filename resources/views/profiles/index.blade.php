@@ -4,8 +4,9 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://camo.githubusercontent.com/03adfa4cac70588a30717c515df0c1e8976bcc339e00848ac214502637544e93/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f66726565636f646563616d702f637572726963756c756d2d6469616772616d2d66756c6c2e6a7067" class="rounded-circle" style="width: 150px;">
+            <img src= "/storage/{{$user->profile->image}}" class="rounded-circle" style="width: 150px;">
         </div>
+        <!-- {$user->profile->image} -->
         <div class="col-9 pt-5">
             <div class = "d-flex justify-content-between align-items-baseline">
                 <div><h1>{{ $user->username }}</h1></div>
