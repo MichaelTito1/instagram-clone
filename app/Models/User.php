@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewUserWelcomeMail;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -51,6 +53,10 @@ class User extends Authenticatable
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+            error_log('about to send email..');
+            ini_set('max_execution_time', 1000);
+            Mail::to($user->email)->send(new NewUserWelcomeMail());
+            error_log('email sent.');
         });
     }
 
